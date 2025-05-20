@@ -58,7 +58,7 @@ jobs:
                 -v ${{ github.workspace }}:/workspace
                 -v ${{ github.workspace }}/kaniko-config:/kaniko/.docker
             run: |
-                /kaniko/executor \
+              /kaniko/executor \
                     --dockerfile=Dockerfile \
                     --context=dir:///workspace \
                     --destination=docker.io/basivireddy/spring-boot-app:latest \
