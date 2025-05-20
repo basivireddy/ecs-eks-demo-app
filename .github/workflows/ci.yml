@@ -61,5 +61,5 @@ jobs:
                 /kaniko/executor \
                     --dockerfile=Dockerfile \
                     --context=dir:///workspace \
-                    --destination=docker.io/YOUR_DOCKER_USERNAME/spring-boot-app:latest \
+                    --destination=docker.io/basivireddy/spring-boot-app:latest \
                     --cleanup
