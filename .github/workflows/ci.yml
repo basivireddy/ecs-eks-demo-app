@@ -57,7 +57,7 @@ jobs:
             options: >
                 -v ${{ github.workspace }}:/workspace
                 -v ${{ github.workspace }}/kaniko-config:/kaniko/.docker
-                run: |
+            run: |
                 /kaniko/executor \
                     --dockerfile=Dockerfile \
                     --context=dir:///workspace \
