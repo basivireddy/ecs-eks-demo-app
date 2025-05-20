@@ -47,8 +47,8 @@ jobs:
 
         - name: Set up Docker config for Kaniko
           run: |
-            mkdir -p /kaniko/.docker
-            echo "{\"auths\":{\"https://index.docker.io/v1/\":{\"username\":\"${{ secrets.DOCKER_USERNAME }}\",\"password\":\"${{ secrets.DOCKER_PASSWORD }}\"}}}" > /kaniko/.docker/config.json
+            mkdir -p ./kaniko-config
+            echo "{\"auths\":{\"https://index.docker.io/v1/\":{\"username\":\"${{ secrets.DOCKER_USERNAME }}\",\"password\":\"${{ secrets.DOCKER_PASSWORD }}\"}}}" > ./kaniko-config/config.json
 
         - name: Build and Push Docker image with Kaniko
           uses: addnab/docker-run-action@v3
@@ -56,7 +56,7 @@ jobs:
             image: gcr.io/kaniko-project/executor:latest
             options: >
                 -v ${{ github.workspace }}:/workspace
-                -v /kaniko/.docker:/kaniko/.docker
+                -v ${{ github.workspace }}/kaniko-config:/kaniko/.docker
                 run: |
                 /kaniko/executor \
                     --dockerfile=Dockerfile \
