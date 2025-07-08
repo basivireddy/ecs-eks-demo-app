@@ -7,7 +7,7 @@
 ![SpringInitializer](images/spring-initializer.png)
 
 
-### Docker Setup
+### Dockerfile Setup
 Create Dockerfile
 
 ### Github Workflows
@@ -24,7 +24,16 @@ Create Dockerfile
 ![ECS](images/ecs-cluster.png)
 
 
-Create new task defination
+#### Create new task defination
+1. image url: basivireddy/spring-boot-app:latest
+2. container port: 8080 (spring boot default port)
+3. host port : 80 (port name)
+
+
+#### Create new service
+
+
+
 
 Create new Service
 
