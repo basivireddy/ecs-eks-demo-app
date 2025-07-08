@@ -27,7 +27,7 @@ Create Dockerfile
 #### Create new task defination
 1. image url: basivireddy/spring-boot-app:latest
 2. container port: 8080 (spring boot default port)
-
+3. host port : 80 (port name)
 
 
 #### Create new service
