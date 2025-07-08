@@ -26,6 +26,10 @@ Create Dockerfile
 
 Create new task defination
 
+Create new Service
+
+By default, ecs load balancer not accessble from internet so modify the Loadbalancer inbound rule to open trafic form internet.
+
 
 
 
