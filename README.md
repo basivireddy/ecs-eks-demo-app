@@ -27,7 +27,7 @@ Create Dockerfile
 #### Create new task defination
 1. image url: basivireddy/spring-boot-app:latest
 2. container port: 8080 (spring boot default port)
-3. host port : 80 (port name)
+
 
 
 #### Create new service
@@ -38,6 +38,8 @@ Create Dockerfile
 Create new Service
 
 By default, ecs load balancer not accessble from internet so modify the Loadbalancer inbound rule to open trafic form internet.
+
+
 
 
 
